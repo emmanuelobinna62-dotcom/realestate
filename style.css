@@ -14,7 +14,7 @@
   height: 100%;
   min-height: 100vh;
 
-  margin: 0px 40px 0px 40px;
+  /* margin: 0px 40px 0px 40px; */
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -125,8 +125,6 @@
 
 .Section-2 {
   min-height: 100vh;
-
-
   margin: 0px 40px 60px 40px;
   font-family: "Poppins", sans-serif;
 }
@@ -430,7 +428,7 @@ padding: 0 40px; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 30px 40px;
+  margin: 30px 0px;
 
 }
 
@@ -769,12 +767,27 @@ footer .last-part {
 
   }
 
+  .Header .search-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Header .search-box > :first-child{
+    width: 70%;
+  }
+
+  
 
   .Header nav i {
     font-size: 26px;
     color: white;
     display: block;
 
+  }
+
+  .Header nav{
+    width: 100%;
   }
 
   /* hide menu on mobile by default */
@@ -814,7 +827,17 @@ footer .last-part {
 
   .Header .Hero-text h1 {
     max-width: 400px;
-    font-size: 40px;
+    font-size: 28px;
+  }
+
+.Section-2{
+  align-items: center;
+  justify-content: center;
+}
+
+  .Section-2 .slide{
+    padding: 20px 0px 30px;
+    margin: 40px 40px 20px 40px;
   }
 
   .Section-4 button {
