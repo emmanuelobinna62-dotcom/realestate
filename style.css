@@ -516,7 +516,7 @@ align-items: flex-end;
 }
 
 .Section-5 .image-box > :first-child{
-  z-index: 1000;
+  z-index: 10;
 }
 
 .Section-5 .image-box > :last-child{
