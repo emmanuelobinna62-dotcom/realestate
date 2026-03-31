@@ -29,6 +29,10 @@ button{
 
 }
 
+.Header nav a{
+  text-decoration: none;
+}
+
 .Header nav {
   display: flex;
   justify-content: space-between;
