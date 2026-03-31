@@ -426,6 +426,9 @@ padding: 0 40px; */
 
 }
 
+
+
+
 /* Section 5 */
 
 
@@ -911,6 +914,13 @@ footer .last-part a{
     align-items: center;
     justify-content: center;
 
+  }
+  .Section-4 .customers h3{
+    text-align: center;
+  }
+
+  .Section-4 .customers span{
+    text-align: center;
   }
 
   .Section-5 .numbers strong{
