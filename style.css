@@ -669,11 +669,15 @@ padding: 0 40px; */
   /* flex: 1; */
   text-align: center;
   /* background-color: red; */
-  max-width: 400px;
+  max-width: 350px;
   width: 100%;
   /* background-color: white; */
   box-shadow: 3px 3px 2px #F8F9FA;
 
+}
+
+.Section-6 .card .agents p{
+  font-size: 14px;
 }
 
 .Section-6 .card .agents img {
