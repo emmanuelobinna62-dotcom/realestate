@@ -721,6 +721,145 @@ footer .last-part {
 }
 
 /* ==========================
+   CONTACT + LEAD SECTION
+========================== */
+
+.contact-section {
+  padding: 80px 0;
+  background: #f2f4f6;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+/* LEFT SIDE (FREEBIE) */
+.lead-side {
+  background: #027576;
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+}
+
+.lead-side h3 {
+  font-size: 28px;
+}
+
+.lead-side p {
+  font-size: 14px;
+  color: #e0f7f7;
+}
+
+.lead-side ul {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.lead-form {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lead-form input {
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+}
+
+.lead-form button {
+  padding: 14px;
+  border-radius: 30px;
+  background-color: #112f56;
+  color: white;
+  transition: 0.3s;
+}
+
+.lead-form button:hover {
+  background-color: #0d2442;
+}
+
+/* RIGHT SIDE (CONTACT FORM) */
+.contact-form {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form h3 {
+  color: #112f56;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #027576;
+}
+
+.contact-form button {
+  padding: 14px;
+  border-radius: 30px;
+  background-color: #027576;
+  color: white;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #015f60;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+
+
+/* ==========================
    RESPONSIVE BREAKPOINTS
 ========================== */
 
