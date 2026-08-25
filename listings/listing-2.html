@@ -1,0 +1,505 @@
+<!-- listing-details-2.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Waterfront Apartment | PrimeNest Realty</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    .hero {
+      position: relative;
+      height: 75vh;
+      overflow: hidden;
+    }
+
+    .hero img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top,
+          rgba(0, 0, 0, 0.7),
+          rgba(0, 0, 0, 0.2));
+      display: flex;
+      align-items: flex-end;
+      padding: 50px;
+      color: white;
+    }
+
+    .overlay-content h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .overlay-content p {
+      font-size: 1.1rem;
+    }
+
+    /* MAIN */
+
+    .main-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
+      margin: 50px 0;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+      margin-bottom: 25px;
+    }
+
+    /* GALLERY */
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .gallery-grid img {
+      border-radius: 16px;
+      object-fit: cover;
+      height: 100%;
+    }
+
+    .side-gallery {
+      display: grid;
+      gap: 15px;
+    }
+
+    .side-gallery img {
+      height: 180px;
+    }
+
+    .bottom-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .bottom-gallery img {
+      border-radius: 16px;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    /* PRICE */
+
+    .price {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #2563eb;
+      margin-bottom: 20px;
+    }
+
+    /* PROPERTY STATS */
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .stat-box {
+      background: #eff6ff;
+      padding: 18px;
+      border-radius: 14px;
+      text-align: center;
+    }
+
+    .stat-box h4 {
+      color: #6b7280;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+
+    .stat-box p {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 18px;
+    }
+
+    /* FEATURES */
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 15px;
+    }
+
+    .feature-item {
+      background: #f9fafb;
+      padding: 14px;
+      border-radius: 12px;
+    }
+
+    /* SIDEBAR */
+
+    .sidebar {
+      position: sticky;
+      top: 20px;
+      height: fit-content;
+    }
+
+    .agent {
+      text-align: center;
+    }
+
+    .agent img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: auto;
+      margin-bottom: 15px;
+    }
+
+    .agent h3 {
+      margin-bottom: 8px;
+    }
+
+    .agent p {
+      color: #6b7280;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: bold;
+      margin-top: 12px;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+    }
+
+    .btn-dark {
+      background: #111827;
+      color: white;
+    }
+
+    .btn-dark:hover {
+      background: #000;
+    }
+
+    /* FORM */
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    .contact-form button {
+      width: 100%;
+      border: none;
+      background: #111827;
+      color: white;
+      padding: 16px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    /* MAP */
+
+    iframe {
+      width: 100%;
+      height: 320px;
+      border: none;
+      border-radius: 16px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:950px) {
+
+      .main-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .overlay-content h1 {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media(max-width:700px) {
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .bottom-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .overlay {
+        padding: 25px;
+      }
+
+      .overlay-content h1 {
+        font-size: 1.8rem;
+      }
+
+      .stats {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1600" alt="">
+
+    <div class="overlay">
+      <div class="overlay-content">
+        <h1>Modern Waterfront Apartment</h1>
+        <p>California, USA • Short Let / Sale</p>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="container">
+
+    <div class="main-layout">
+
+      <!-- LEFT CONTENT -->
+
+      <div>
+
+        <!-- IMAGE SECTION -->
+
+        <div class="gallery-grid">
+
+          <img src="/images/img_3.jpg" alt="">
+
+          <div class="side-gallery">
+            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200" alt="">
+            <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200" alt="">
+          </div>
+
+        </div>
+
+        <div class="bottom-gallery">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1200" alt="">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1200" alt="">
+        </div>
+
+        <!-- DETAILS -->
+
+        <div class="card">
+
+          <div class="price">$1,291,000</div>
+
+          <p>
+            Experience luxury waterfront living in this stunning fully furnished apartment located in California.
+            Designed with premium finishing, panoramic city views, floor-to-ceiling windows, and modern amenities,
+            this property is perfect for professionals, executives, and investors seeking elegance and convenience.
+          </p>
+
+          <div class="stats">
+
+            <div class="stat-box">
+              <h4>Bedrooms</h4>
+              <p>3</p>
+            </div>
+
+            <div class="stat-box">
+              <h4>Bathrooms</h4>
+              <p>4</p>
+            </div>
+
+            <div class="stat-box">
+              <h4>Parking</h4>
+              <p>2 Cars</p>
+            </div>
+
+            <div class="stat-box">
+              <h4>Size</h4>
+              <p>420 sqm</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- FEATURES -->
+
+        <div class="card">
+
+          <h2 class="section-title">Amenities & Features</h2>
+
+          <div class="features">
+
+            <div class="feature-item">24/7 Power Supply</div>
+            <div class="feature-item">Ocean View Balcony</div>
+            <div class="feature-item">Smart Access Control</div>
+            <div class="feature-item">Swimming Pool</div>
+            <div class="feature-item">Fitness Center</div>
+            <div class="feature-item">High Speed Internet</div>
+            <div class="feature-item">CCTV Surveillance</div>
+            <div class="feature-item">Elevator Access</div>
+
+          </div>
+
+        </div>
+
+        <!-- MAP -->
+
+        <div class="card">
+
+          <h2 class="section-title">Property Location</h2>
+
+          <iframe src="https://www.google.com/maps?q=Beverly+Hills+California&output=embed">
+          </iframe>
+
+        </div>
+
+      </div>
+
+      <!-- SIDEBAR -->
+
+      <div class="sidebar">
+
+        <!-- AGENT -->
+
+        <div class="card agent">
+
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
+
+          <h3>Jessica Morgan</h3>
+
+          <p>Luxury Property Advisor</p>
+
+          <a href="tel:+2348098765432" class="btn btn-primary">
+            Call Agent
+          </a>
+
+          <a href="https://wa.me/2348098765432" class="btn btn-dark">
+            Chat on WhatsApp
+          </a>
+
+        </div>
+
+        <!-- CONTACT FORM -->
+
+        <div class="card">
+
+          <h2 class="section-title">Schedule Inspection</h2>
+
+          <form class="contact-form" id="contactForm">
+
+            <input type="text" placeholder="Full Name" required>
+
+            <input type="email" placeholder="Email Address" required>
+
+            <input type="tel" placeholder="Phone Number" required>
+
+            <textarea rows="5" placeholder="I'm interested in this property..."></textarea>
+
+            <button type="submit">
+              Send Request
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    const contactForm = document.getElementById("contactForm");
+
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      alert("Your inspection request has been submitted!");
+
+      contactForm.reset();
+    });
+  </script>
+
+</body>
+
+</html>
